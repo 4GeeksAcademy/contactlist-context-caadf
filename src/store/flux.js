@@ -8,12 +8,12 @@ const getState = ({ getStore, getActions, setStore }) => {
         store: {
             contacts: [
                 {
-                    id: 1,
-                    full_name: '',
-                    email: '',
-                    agenda_slug: 'Catalina',
-                    address: '',
-                    phone: ''
+                    id: "",
+                    full_name: "",
+                    email: "",
+                    agenda_slug: "Catalina",
+                    address: "",
+                    phone: "",
                 }
             ]
         },
