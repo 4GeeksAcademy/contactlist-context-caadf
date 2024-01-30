@@ -3,11 +3,28 @@
  *  getActions: () => {}, //funcion que devuelve el objeto actions con cada una de las funciones alli definidas,
  *  setStore: () => {} // funcion que recibe como argumento un objeto con cada uno de los atributos que se desea actulizar o asignar un valor 
  */
-const getStore = ({ getStore, getActions, setStore }) => {
+const getState = ({ getStore, getActions, setStore }) => {
     return {
-        store: {},
-        actions: {}
+        store: {
+            contacts: [
+                {
+                    id: 1,
+                    full_name: '',
+                    email: '',
+                    agenda_slug: 'Catalina',
+                    address: '',
+                    phone: ''
+                }
+            ]
+        },
+        actions: {
+            getContacts: () => {
+                fetch('https://playground.4geeks.com/apis/fake/contact/agenda/Catalina')
+                    .then(response => response.json())
+                    .then(datos => setStore({ contacts: datos }))
+            }
+        }
     }
 }
 
-export default getStore
+export default getState
