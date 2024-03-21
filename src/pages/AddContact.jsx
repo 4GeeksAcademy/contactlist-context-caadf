@@ -22,14 +22,14 @@ const AddContact = () => {
     return (
         <>
             <label for="name">Full name</label> <br />
-            <input type="text" id="name" value=(contact.full_name) placeholder="full name" onChange={(e) => setContact({ ...contact, full_name: e.target.value })})}></input >
+            <input type="text" id="name" value={contact.full_name} placeholder="full name" onChange={(e) => setContact({ ...contact, full_name: e.target.value })}></input>
             <label for="name">Email</label> <br />
-        <input type="text" id="email" value=(contact.email) placeholder = "full name" onChange = {(e)=> setContact({ ...contact, email: e.target.value })})}></input >
-        <label for="name">Full name</label> <br />
-        <input type="text" id="name" value=(contact.full_name) placeholder = "full name" onChange = {(e)=> setContact({ ...contact, phone: e.target.value })})}></input >
-        <label for="name">Full name</label> <br />
-        <input type="text" id="name" value=(contact.full_name) placeholder = "full name" onChange = {(e)=> setContact({ ...contact, address: e.target.value })})}></input >
-    <button className="btn btn-warning" onClick={() => navigate('/')}>Regresar</button>
+            <input type="text" id="email" value={contact.email} placeholder="full name" onChange={(e) => setContact({ ...contact, email: e.target.value })}></input >
+            <label for="name">Addresss</label> <br />
+            <input type="text" id="name" value={contact.address} placeholder="full name" onChange={(e) => setContact({ ...contact, phone: e.target.value })}></input >
+            <label for="name">Phone</label> <br />
+            <input type="text" id="name" value={contact.phone} placeholder="full name" onChange={(e) => setContact({ ...contact, address: e.target.value })}></input >
+            <button className="btn btn-warning" onClick={() => navigate('/')}>Regresar</button>
         </>
     )
 }
