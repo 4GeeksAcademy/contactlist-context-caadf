@@ -20,7 +20,7 @@ const AddContact = () => {
 
     return (
         <>
-        <div>Add New Contact</div>
+        <div className>Add New Contact</div>
         <form onSubmit={(e) => {
             e.preventDefault();
 
