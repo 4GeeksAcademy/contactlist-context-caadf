@@ -1,10 +1,15 @@
 import React, { useContext, useState } from 'react'
 import { Context } from '../store/AppContext'
+import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
+import { FaRegTrashAlt } from "react-icons/fa";
+import { TiPencil } from "react-icons/ti";
 
 const Home = () => {
 
     const { store, actions } = useContext(Context)
+    const navigate = useNavigate()
+
 
     return (
         <div className='container'>
@@ -17,25 +22,31 @@ const Home = () => {
                 <div className="col-md-12">
                     {
                         store.contacts.length > 0 ?
-                        store.contacts.map((contact) => {
-                            return (
-                                <div key={contact.id} className='border border-2 mb-3 rounded-pill'>
-                                    <div className="row">
-                                        <div className="col-md-2 p-2">
-                                            <img src="https://picsum.photos/180/180" className='img-fluid rounded-circle m-2' alt="" />
+                            store.contacts.map((contact) => {
+                                return (
+                                    <div key={contact.id} className='border border-2 mb-3 rounded-pill'>
+                                        <div className="row">
+                                            <div className="col-md-2 p-2">
+                                                <img src="https://picsum.photos/180/180" className='img-fluid rounded-circle m-2' alt="" />
+                                            </div>
+                                            <div className="col-md-8 p-2">
+                                                <p>{contact.full_name}</p>
+                                                <p>{contact.address}</p>
+                                                <p>{contact.email}</p>
+                                                <p>{contact.phone}</p>
+                                            </div>
+                                            <div className="col-md-2 p-2">
+                                                <button type="button" class="btn btn-secondary" onClick={()=>actions.deleteContact(contact.id)}>Borrar <FaRegTrashAlt /></button> 
+                                                <Link  class="btn btn-warning" to={"/editcontact/"+contact.id}>Editar <TiPencil /></Link>
+                                            </div>
                                         </div>
-                                        <div className="col-md-10 p-2">
-                                            <p>{contact.full_name}</p>
-                                            <p>{contact.address}</p>
-                                            <p>{contact.email}</p>
-                                            <p>{contact.phone}</p>
-                                        </div>
+
+
                                     </div>
-                                </div>
+                                )
+                            }) : (
+                                <h4 className='text-center'>Lista de contactos vacia</h4>
                             )
-                        }):(
-                            <h4 className='text-center'>Lista de contactos vacia</h4>
-                        )
                     }
                 </div>
                 <div className="col-md-12">

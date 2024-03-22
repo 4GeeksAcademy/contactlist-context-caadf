@@ -22,6 +22,9 @@ const getState = ({ getStore, getActions, setStore }) => {
                 fetch('https://playground.4geeks.com/apis/fake/contact/agenda/Catalina')
                     .then(response => response.json())
                     .then(datos => setStore({ contacts: datos }))
+            },
+            addContacts: () => {
+                
             }
         }
     }
