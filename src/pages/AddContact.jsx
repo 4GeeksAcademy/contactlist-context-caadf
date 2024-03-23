@@ -21,7 +21,9 @@ const AddContact = () => {
     return (
         <>
             <div className="formulario">
+               <div className="titulo>">
                 <h5>Add New Contact</h5>
+                </div>
                 <form onSubmit={(e) => {
                     e.preventDefault();
 

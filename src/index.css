@@ -1,22 +1,26 @@
 .formulario {
-    display: flex;
-    justify-content: center;
- 
+   /*  display: flex; */
+   margin-left: 600px;
+
 }
 
 .boton {
-    display: flex;
-    justify-content: center;
-    margin-left: 50px;
+  /*   display: flex; */
+    /* justify-content: center; */
+   /*  margin-left: 50px; */
     margin-top: 15px;
+    margin-left: 600px;
  
 }
 
 .contenedor {
     margin-top: 50px;
+ /*    margin-right: 10px; */
+    
    
 }
 
 .button{
     margin-top: 20px;
 }
+ 
