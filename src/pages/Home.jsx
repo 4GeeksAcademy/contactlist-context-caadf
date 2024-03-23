@@ -37,7 +37,7 @@ const Home = () => {
                                             </div>
                                             <div className="col-md-2 p-2">
                                                 <button type="button" class="btn btn-secondary" onClick={()=>actions.deleteContact(contact.id)}>Borrar <FaRegTrashAlt /></button> 
-                                                <Link  class="btn btn-warning" to={"/editcontact/"+contact.id}>Editar <TiPencil /></Link>
+                                                <Link  class="btn btn-info" to={"/editcontact/"+contact.id}>Editar <TiPencil /></Link>
                                             </div>
                                         </div>
 

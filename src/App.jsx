@@ -8,13 +8,13 @@ import EditContact from './pages/EditContact';
 const App = () => {
     return (
         <>
-        <BrowserRouter>
-            <Routes>
-            <Route path='/AddContact' element={<AddContact />} />
-                <Route path='/' element={<Home />} />
-                <Route path='/editcontact/:id' element={<EditContact />} />
-            </Routes>
-        </BrowserRouter>
+            <BrowserRouter>
+                <Routes>
+                    <Route path='/addContact' element={<AddContact />} />
+                    <Route path='/' element={<Home />} />
+                    <Route path='/editcontact/:id' element={<EditContact />} />
+                </Routes>
+            </BrowserRouter>
         </>
     )
 }
